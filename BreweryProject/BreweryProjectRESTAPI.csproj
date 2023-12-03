@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\AccountsController.cs" />
+    <Compile Remove="Controllers\AddressesController.cs" />
+    <Compile Remove="Controllers\AddressTypesController.cs" />
+    <Compile Remove="Controllers\IngredientInventoryAdditionsController.cs" />
+    <Compile Remove="Controllers\SupplierAddressesController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.23" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.23" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.23">
