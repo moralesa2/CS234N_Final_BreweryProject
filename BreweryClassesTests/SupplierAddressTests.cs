@@ -222,7 +222,6 @@ namespace BreweryClassesTests
 
         //I'm sure there are more simple ways to do the CrUD tests but clearly I could not figure them out
 
-        /*AddressId, StreetLine1, StreetLine2, City, State, Zipcode , Country */
 
         public void PrintAll(List<SupplierAddress> supplierAddresses)
         {

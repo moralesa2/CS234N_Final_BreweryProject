@@ -64,10 +64,25 @@ namespace BreweryClassesTests
             PrintAll(suppliers);
         }
 
-        /*[Test]
-        public void GetWith???Test()
+        [Test]
+        public void GetWithIngredientInventoryAdditionsTest()
         {
-        }*/
+            s = dbContext.Suppliers.Include("IngredientInventoryAdditions").Where(s => s.SupplierId == 2).SingleOrDefault();
+            Assert.IsNotNull(s);
+            Assert.That(s.Name, Is.EqualTo("Malteurop Malting Company"));
+            Assert.That(s.IngredientInventoryAdditions.Count, Is.EqualTo(12));
+            Console.WriteLine(s);
+        }
+
+        [Test]
+        public void GetWithSupplierAddressesTest()
+        {
+            s = dbContext.Suppliers.Include("SupplierAddresses").Where(s => s.SupplierId == 5).SingleOrDefault();
+            Assert.IsNotNull(s);
+            Assert.That(s.Name, Is.EqualTo("John I. Haas, Inc."));
+            Assert.That(s.SupplierAddresses.Count, Is.EqualTo(2));
+            Console.WriteLine(s);
+        }
 
         [Test]
         public void GetWithJoinTest()
@@ -169,8 +184,6 @@ namespace BreweryClassesTests
             dbContext.SaveChanges();
             Assert.IsNull(dbContext.Suppliers.Find(s.SupplierId));
         }
-
-        /*AddressId, StreetLine1, StreetLine2, City, State, Zipcode , Country */
 
         public void PrintAll(List<Supplier> suppliers)
         {

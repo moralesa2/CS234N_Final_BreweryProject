@@ -62,10 +62,15 @@ namespace BreweryClassesTests
             PrintAll(addressTypes);
         }
 
-        /*[Test]
-        public void GetWith???Test()
+        [Test]
+        public void GetWithSupplierAddressesTest()
         {
-        }*/
+            a = dbContext.AddressTypes.Include("SupplierAddresses").Where(a => a.AddressTypeId == 2).SingleOrDefault();
+            Assert.IsNotNull(a);
+            Assert.That(a.Name, Is.EqualTo("mailing"));
+            Assert.That(a.SupplierAddresses.Count, Is.EqualTo(6));
+            Console.WriteLine(a);
+        }
 
         [Test]
         public void GetWithJoinTest()
@@ -136,8 +141,6 @@ namespace BreweryClassesTests
             dbContext.SaveChanges();
             Assert.IsNull(dbContext.AddressTypes.Find(4));
         }
-
-        /*AddressId, StreetLine1, StreetLine2, City, State, Zipcode , Country */
 
         public void PrintAll(List<AddressType> addressTypes)
         {

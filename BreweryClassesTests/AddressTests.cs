@@ -62,10 +62,15 @@ namespace BreweryClassesTests
             PrintAll(addresses);
         }
 
-        /*[Test]
-        public void GetWith???Test()
+        [Test]
+        public void GetWithSupplierAddressesTest()
         {
-        }*/
+            a = dbContext.Addresses.Include("SupplierAddresses").Where(a => a.AddressId == 1).SingleOrDefault();
+            Assert.IsNotNull(a);
+            Assert.That(a.StreetLine1, Is.EqualTo("800 West 1st Ave"));
+            Assert.That(a.SupplierAddresses.Count, Is.EqualTo(2));
+            Console.WriteLine(a);
+        }
 
         [Test]
         public void GetWithJoinTest()
@@ -78,7 +83,7 @@ namespace BreweryClassesTests
                sa => sa.AddressId,
                (a, sa) => new { sa.SupplierId, a.AddressId, a.StreetLine1, sa.AddressTypeId}).OrderBy(r => r.SupplierId).ToList();
             Assert.That(addresses.Count, Is.EqualTo(12));
-            // I wouldn't normally print here but this lets you see what each object looks like
+            // print objects
             foreach (var a in addresses)
             {
                 Console.WriteLine(a);
