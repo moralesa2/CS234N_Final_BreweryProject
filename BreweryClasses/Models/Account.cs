@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 
 namespace BreweryClasses.Models
 {
@@ -21,5 +22,10 @@ namespace BreweryClasses.Models
         public string? SalesPersonName { get; set; }
 
         public virtual ICollection<InventoryTransaction> InventoryTransactions { get; set; }
+
+        public override string ToString()
+        {
+            return AccountId + ", " + Address + ", " + City + ", " + State + ", " + Zipcode + ", " + Phone + ", " + ContactName + ", " + SalesPersonName;
+        }
     }
 }
