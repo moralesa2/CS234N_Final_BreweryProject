@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Emit;
+using System.Xml.Linq;
 
 namespace BreweryClasses.Models
 {
@@ -17,5 +19,10 @@ namespace BreweryClasses.Models
 
         public virtual Ingredient Ingredient { get; set; } = null!;
         public virtual Supplier Supplier { get; set; } = null!;
+
+        public override string ToString()
+        {
+            return IngredientInventoryAdditionId + ", " + IngredientId + ", " + OrderDate + ", " + EstimatedDeliveryDate + ", " + TransactionDate + ", " + SupplierId + ", " + Quantity + ", " + QuantityRemaining + ", " + UnitCost;
+        }
     }
 }

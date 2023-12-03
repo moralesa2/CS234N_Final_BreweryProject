@@ -23,7 +23,11 @@ namespace BreweryClasses
 
             string connectionString = builder.Build().GetConnectionString("mySql");
 
-            return connectionString;
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new InvalidOperationException("MySql connection string is null or empty.");
+            }
+            return connectionString;           
         }
     }
 }

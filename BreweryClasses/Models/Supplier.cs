@@ -24,5 +24,10 @@ namespace BreweryClasses.Models
 
         public virtual ICollection<IngredientInventoryAddition> IngredientInventoryAdditions { get; set; }
         public virtual ICollection<SupplierAddress> SupplierAddresses { get; set; }
+
+        public override string ToString()
+        {
+            return SupplierId + ", " + Name + ", " + Phone + ", " + Email + ", " + Website + ", " + ContactFirstName + ", " + ContactLastName + ", " + ContactPhone + ", " + ContactEmail + ", " + Note;
+        }
     }
 }

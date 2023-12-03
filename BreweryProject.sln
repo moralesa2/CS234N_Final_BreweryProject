@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreweryProject", "BreweryProject\BreweryProject.csproj", "{BB53ABA6-CD14-432D-B1CF-4B9799F2FC8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreweryProjectRESTAPI", "BreweryProject\BreweryProjectRESTAPI.csproj", "{BB53ABA6-CD14-432D-B1CF-4B9799F2FC8B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreweryClasses", "BreweryClasses\BreweryClasses.csproj", "{FE3036CB-7642-4CAA-88D6-48CC4F31CEF4}"
 EndProject

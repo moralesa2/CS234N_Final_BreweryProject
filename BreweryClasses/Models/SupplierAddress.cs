@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace BreweryClasses.Models
 {
@@ -12,5 +13,10 @@ namespace BreweryClasses.Models
         public virtual Address Address { get; set; } = null!;
         public virtual AddressType AddressType { get; set; } = null!;
         public virtual Supplier Supplier { get; set; } = null!;
+
+        public override string ToString()
+        {
+            return SupplierId + ", " + AddressId + ", " + AddressTypeId;
+        }
     }
 }

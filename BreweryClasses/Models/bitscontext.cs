@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace BreweryClasses.Models
 {
-    public partial class bitscontext : DbContext
+    public partial class BitsContext : DbContext
     {
-        public bitscontext()
+        public BitsContext()
         {
         }
 
-        public bitscontext(DbContextOptions<bitscontext> options)
+        public BitsContext(DbContextOptions<BitsContext> options)
             : base(options)
         {
         }

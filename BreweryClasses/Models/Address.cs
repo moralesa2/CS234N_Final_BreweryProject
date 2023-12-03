@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Emit;
+using System.Xml.Linq;
 
 namespace BreweryClasses.Models
 {
@@ -19,5 +21,10 @@ namespace BreweryClasses.Models
         public string Country { get; set; } = null!;
 
         public virtual ICollection<SupplierAddress> SupplierAddresses { get; set; }
+
+        public override string ToString()
+        {
+            return AddressId + ", " + StreetLine1 + ", " + StreetLine2 + ", " + City + ", " + State + ", " + Zipcode + ", " + Country;
+        }
     }
 }
