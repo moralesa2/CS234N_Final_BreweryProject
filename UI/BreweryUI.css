@@ -1,0 +1,115 @@
+body
+{
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+/* alice blue: #F0F8FF*/
+ 
+header
+{
+	color: #000;
+}
+
+h1, h2
+{
+	font-family: "Times New Roman", Verdana, Helvetica, Arial, sans-serif;
+	text-align: left;
+}
+h2
+{
+	padding-top: 5%;
+}
+
+nav 
+{
+}
+#wrapper
+/* sets size boundary for page */
+{
+	position: relative;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 900px;
+	min-width: 700px; /* not for small handheld screens */
+	border: 2px solid #000;
+	background-color: #F0F8FF;
+}
+
+#topNav
+{	
+	border-bottom: 2px solid black;
+	padding: 5px;
+	text-align: center;
+	line-height: 1.8em;
+}
+
+#topNav a:link
+{
+	color: black;
+	border: 1px solid black;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 50px;
+	text-decoration: none;
+}
+
+#topNav a:hover
+{
+	color: #0000ff;
+	border-color: #0000ff;
+}
+
+main
+{
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 5%;
+	min-height: 700px;
+}
+img
+{
+	position: absolute;
+	left: 70%;
+}
+
+footer
+{
+	color: #303;
+	border-top: 2px solid black;
+	font-size: 0.8em;
+	text-align: left;
+}
+
+address
+{
+	
+}
+
+/* table styles */
+table, th, td
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 3px;
+	text-align: center;
+}
+
+td
+{
+	font-size: 0.8em;
+}
+
+th
+{
+	font-size: 0.8em;
+}
+
+button
+{
+	margin-top: 5%;
+}
+
+.center
+{
+	margin-top: 1%;
+}

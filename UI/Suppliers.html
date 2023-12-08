@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- CS234N Final Project - UI Aubrey Morales -->
+	<title>Manifest Beer Co.</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1"> <!-- www.sitepoint.com/media-queries-width-vs-device-width/ -->
+    <link href="BreweryUI.css" rel="stylesheet" media="only screen and (min-width: 501px)" />
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		
+		<nav id="topNav">
+			<a href="index.html">Home</a>
+			<a href="Pub.html">Pub</a>
+			<a href="Sales.html">Sales</a>
+			<a href="Brew.html">Brew</a>
+			<a href="Admin.html" id="adminDropdown">Admin</a>
+		</nav>
+		<!-- home, pub, sales, brew, admin (dropwdown) -->
+	</header>
+	
+	<main>
+		<img src="images/transparentLogo.png" class="img-logo" alt="Logo" title="Logo" height="150" />
+		<h1>Manifest Beer Co.</h1>
+		<h2>Suppliers</h2>
+		<div style="overflow-x:auto;">
+			<table class="center">
+				<tr>
+					<th colspan="7">Details</th>
+				</tr>
+				<tr>
+					<th>Name</th>
+					<th>Phone</th>
+					<th>Email</th>
+					<th>Website</th>
+					<th>Contact Name</th>
+					<th>Contact Phone</th>
+					<th>Contact Email</th>
+				</tr>
+				<tr>
+					<th class="rowHeader">BSG Craft Brewing</th>
+					<td>18003742739</td>
+					<td>sales@bsgcraft.com</td>
+					<td>https://bsgcraftbrewing.com</td>
+					<td>""</td>
+					<td>""</td>
+					<td>""</td>
+				</tr>
+				<tr>
+					<th class="rowHeader">Malteurop Malting Company</th>
+					<td>8445466258</td>
+					<td>customerservice@malteurop.com/</td>
+					<td>https://www.malteurop.com/en/usa</td>
+					<td>""</td>
+					<td>""</td>
+					<td>""</td>
+				</tr>
+				<tr>
+					<th class="rowHeader">Country Malt Group</th>
+					<td>8004967732</td>
+					<td>orders.usa@brewcraftusa.com</td>
+					<td>https://shop.brewcraftusa.com/</td>
+					<td>""</td>
+					<td>Zach Grossfield</td>
+					<td>zgrossfeld@countrymalt.com</td>
+
+				</tr>
+				<tr>
+					<th class="rowHeader">Hopsteiner</th>
+					<td>8003398410</td>
+					<td>sales@hopsteiner.com</td>
+					<td>https://www.hopsteiner.com/</td>
+					<td>Bill Elkins</td>
+					<td>509.453.4731</td>
+					<td>welkins@hopsteiner.com</td>
+				</tr>
+				<tr>
+					<th class="rowHeader">John I. Haas, Inc.</th>
+					<td>2027774800</td>
+					<td>""</td>
+					<td>https://www.johnihaas.com/</td>
+					<td>""</td>
+					<td>""</td>
+					<td>""</td>
+				</tr>
+				<tr>
+					<th class="rowHeader">White Labs</th>
+					<td>8885932785</td>
+					<td>info@whitelabs.com</td>
+					<td>https://www.whitelabs.com/</td>
+					<td>Kim Derr</td>
+					<td>858.267.7691</td>
+					<td>kderr@whitelabs.com </td>
+				</tr>
+			</table>
+		</div>
+		<button onclick="toggleEdit()">Edit</button>
+		<button onclick="saveChanges()">Save Changes</button>
+	</main>
+	<footer>
+		Manifest Beer Co.
+		<address>
+			Eugene, OR
+		</address>
+	</footer>
+	</div>
+</body>
+</html>
